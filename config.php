@@ -3,9 +3,9 @@
 return [
     'db' => [
         'host'    => 'localhost',
-        'name'    => 'u486977009_dr',
-        'user'    => 'u486977009_dr12',
-        'pass'    => 't|CJPF&0U',
+        'name'    => '',
+        'user'    => '',
+        'pass'    => '',
         'charset' => 'utf8mb4',
     ],
 
