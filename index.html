@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>DR - Director</title>
+<meta name="description" content="مساعد ذكي يتحقق من أمان الأدوية أثناء الحمل من عدة مصادر">
+<meta name="theme-color" content="#0f766e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json?v=22">
+<link rel="icon" href="icons/icon-192.png?v=22">
+<link rel="apple-touch-icon" href="icons/icon-192.png?v=22">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+      <div>
+        <h1>DR - Director</h1>
+        <p>أمان الأدوية أثناء الحمل</p>
+      </div>
+    </div>
+    <div class="actions">
+      <button id="installBtn" class="btn-ghost" hidden>تثبيت التطبيق</button>
+      <button id="historyBtn" class="icon-btn" aria-label="السجل">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="chat" class="chat" aria-live="polite"></main>
+
+  <div class="chips" id="chips"></div>
+
+  <form id="form" class="composer" autocomplete="off">
+    <input id="drug" type="text" placeholder="اكتب اسم الدواء…" maxlength="80" required enterkeyhint="send" aria-label="اسم الدواء">
+    <button id="send" type="submit" aria-label="إرسال">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M2.5 11.3 20.6 3.6c.8-.3 1.5.4 1.2 1.2l-7.7 18.1c-.4.9-1.7.8-2-.1l-2.1-6.9-6.9-2.1c-.9-.3-1-1.6-.1-2z"/></svg>
+    </button>
+  </form>
+  <p class="foot">المعلومات استرشادية ولا تغني عن استشارة الطبيب أو الصيدلي.</p>
+  <div class="credits" style="text-align:center;margin:16px auto 26px;background:linear-gradient(135deg,#0f766e,#14b8a6);color:#fff;padding:6px 14px;border-radius:10px;font-size:.85rem;font-weight:700;box-shadow:0 2px 10px rgba(15,118,110,.3);border:1px solid rgba(255,255,255,.4);animation:glow 2s ease-in-out infinite alternate;max-width:fit-content">Developed & Powered by : <strong style="color:#fff;text-shadow:0 0 10px rgba(255,255,255,.5)">Osama Saied</strong></div>
+  <style>
+    @keyframes glow{
+      from{box-shadow:0 0 15px rgba(20,184,166,.5),0 0 30px rgba(20,184,166,.4),0 0 45px rgba(20,184,166,.2)}
+      to{box-shadow:0 0 25px rgba(20,184,166,.7),0 0 50px rgba(20,184,166,.5),0 0 75px rgba(20,184,166,.3)}
+    }
+  </style>
+</div>
+
+<div id="scrim" class="scrim" hidden></div>
+<aside id="drawer" class="drawer" hidden aria-label="سجل الأدوية">
+  <div class="drawer-head">
+    <h2>سجل الأدوية</h2>
+    <button id="closeDrawer" class="icon-btn" aria-label="إغلاق">✕</button>
+  </div>
+  <ul id="historyList" class="hist"></ul>
+</aside>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
